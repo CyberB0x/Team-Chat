@@ -20,9 +20,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
     # future API and web routes:
-    # path("api/", include("accounts.api_urls")),
+    path('api/', include('accounts.urls')),
+
     # path("", include("chat.urls")),
 ]
 
