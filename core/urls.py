@@ -23,8 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # future API and web routes:
     path('api/', include('accounts.urls')),
-
-    # path("", include("chat.urls")),
+    path("api/chat/", include("chat.urls")),
 ]
 
 # Serve media files during development
