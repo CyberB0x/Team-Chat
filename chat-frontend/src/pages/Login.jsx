@@ -16,7 +16,8 @@ export default function Login() {
     setError("");
 
     try {
-      const res = await API.post("/accounts/login/", form);
+      const res = await API.post("/login/", form);
+      console.log("Response:", res.data);
       const token = res.data.access;
       localStorage.setItem("token", token);
       navigate("/chat");
